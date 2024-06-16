@@ -2,9 +2,9 @@
 
 #include "graph.h"
 
-double process_node(struct Node *node, double value) { return node->process(node->data, value); }
+double process_node(struct graph_node *node) { return node->process(node->data); }
 
-void free_node(struct Node *node)
+void free_node(struct graph_node *node)
 {
     node->free_data(node);
     free(node);
