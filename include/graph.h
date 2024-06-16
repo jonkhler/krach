@@ -1,11 +1,15 @@
-#pragma once
+#ifndef GRAPH_H
+#define GRAPH_H
 
-struct Node {
-	const double (*process)(void*, double);
-	const void (*free_data)(void*);
-	void* data;
-};
+struct Node
+{
+    double (*process)(void *, double);
+    void (*free_data)(void *);
+    void *data;
+} __attribute__((aligned(32)));
 
-double process_node(struct Node* node, double value);
+double process_node(struct Node *node, double value);
 
-void free_node(struct Node* node);
+void free_node(struct Node *node);
+
+#endif

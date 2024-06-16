@@ -1,0 +1,12 @@
+Checks: >
+  clang-analyzer-*,
+  modernize-*,
+  performance-*,
+  bugprone-*,
+  readability-*,
+  cppcoreguidelines-*,
+  -cppcoreguidelines-pro-type-vararg,
+  -modernize-use-trailing-return-type
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+ExtraArgs: ['-I./include', '-I/usr/include/pipewire-0.3', '-I/usr/include/spa-0.2']

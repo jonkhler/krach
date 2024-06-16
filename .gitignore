@@ -2,3 +2,7 @@ build.log
 *.o
 *.sw*
 jupyter
+
+compile_commands.json
+build
+
