@@ -1,8 +1,8 @@
 CC=gcc
 EXTERNAL=$(shell pkg-config --cflags --libs libpipewire-0.3) -lm
 CFLAGS = -Wall -Werror -g -I./include
-DEPS = include/audio.h
-SRC = first.c audio.c
+DEPS = include/audio.h include/graph.h include/mix.h
+SRC = src/audio.c src/graph.c src/mix.c src/first.c
 OBJ = $(SRC:.c=.o)
 EXEC = run
 
